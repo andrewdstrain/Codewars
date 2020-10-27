@@ -9,7 +9,7 @@ public class WolfFinder {
     public static String warnTheSheep(String[] array) {
         String answer;
 
-        // Reverse the array to the indexes are in the correct order
+        // Reverse the array so the indexes are in the correct order
         List<String> reverse = Arrays.asList(array);
         Collections.reverse(reverse);
 
@@ -21,10 +21,11 @@ public class WolfFinder {
             answer = "Pls go away and stop eating my sheep";
         } else {
             // Wolf is facing a sheep.
-            // The index of the sheep the wolf is going to eat is
-            // `index - 1` but adding 1 to that to get an index that starts at
-            // 1 is just `index`.
-            answer = "Oi! Sheep number " + index + "! You are about to be eaten by a wolf!";
+            // The index of the sheep the wolf is going to eat is `index - 1`
+            // but adding 1 to that for an array that starts at 1 is just
+            // `index`.
+            answer = "Oi! Sheep number " + index +
+                     "! You are about to be eaten by a wolf!";
         }
 
         return answer;
